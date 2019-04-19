@@ -23,7 +23,7 @@ jobs:
       - run: sudo apt install -y libsqlite3-dev zlib1g-dev
       - run: sudo apt install -y mysql-client
       - run: sudo docker-php-ext-install zip
-      - run: sudo apt install -y php-mysql
+      - run: sudo docker-php-ext-install pdo_mysql
       - run: sudo composer self-update
       - restore_cache:
           keys:
