@@ -50,6 +50,7 @@ jobs:
           name: Mysql database
           command: mysql -h 127.0.0.1 -u root -e "create database todoapp;"
       - run: php artisan key:generate
+      - run: php artisan passport:install
       - run:
           name: Run Laravel Server
           command: php artisan serve
