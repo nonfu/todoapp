@@ -16,7 +16,7 @@ jobs:
             MYSQL_USER: root
             MYSQL_ALLOW_EMPTY_PASSWORD: true
 
-    working_directory: ~/laravel
+    working_directory: ~/todoapp
 
     steps:
       - checkout
