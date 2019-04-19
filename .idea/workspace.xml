@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ed33ce57-2f7e-4a22-80fb-a2302d9b6130" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +30,7 @@
           <entry key="php" value="1200" />
           <entry key="testing" value="53" />
           <entry key="vue" value="109" />
-          <entry key="yml" value="209" />
+          <entry key="yml" value="241" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -41,7 +40,7 @@
           <entry key="JavaScript" value="27" />
           <entry key="PHP" value="1056" />
           <entry key="Vue.js" value="109" />
-          <entry key="YAML" value="209" />
+          <entry key="YAML" value="241" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="299">
+              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -405,18 +404,18 @@
       <option name="presentableId" value="Default" />
       <updated>1555477821443</updated>
       <workItem from="1555477822664" duration="17407000" />
-      <workItem from="1555655234632" duration="6410000" />
+      <workItem from="1555655234632" duration="6556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23817000" />
+    <option name="totallyTimeSpent" value="23963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -431,7 +430,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09518072" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19759037" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -774,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="299">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
         </state>
       </provider>
     </entry>
