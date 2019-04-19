@@ -51,7 +51,7 @@ class TasksTest extends TestCase
     /**
      * 测试认证用户可以删除任务
      */
-    public function testUseCanDeleteTask()
+    public function testUserCanDeleteTask()
     {
         $user = factory(User::class)->create();
         $task = factory(Task::class)->create([

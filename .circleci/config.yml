@@ -29,7 +29,7 @@ jobs:
           keys:
               - composer-v1-{{ checksum "composer.lock" }}
               - composer-v1-
-      - run: cp .env.testing .env
+      - run: mv .env.testing .env
       - run: composer install -n --ignore-platform-reqs
       - save_cache:
           key: composer-v1-{{ checksum "composer.lock" }}
