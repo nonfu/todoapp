@@ -11,9 +11,11 @@ addons:
 
 install:
     - mv .env.testing .env
-    - mysql -e 'create database todolist;'
+    - mysql -e 'create database todoapp;'
     - composer self-update
     - composer install --no-interaction --prefer-dist --no-suggest
+    - npm install
+    - npm run production
     - php artisan key:generate
 
 before_script:
@@ -21,5 +23,5 @@ before_script:
     - php artisan serve &
 
 script:
-    - /vendor/bin/phpunit
+    - vendor/bin/phpunit
     - php artisan dusk
