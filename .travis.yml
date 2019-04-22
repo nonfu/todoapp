@@ -8,6 +8,16 @@ services:
 
 addons:
     chrome: stable
+    apt:
+        sources:
+            - mysql-5.7-trusty
+        packages:
+            - mysql-server
+            - mysql-client
+
+dist: trusty
+
+sudo: required
 
 install:
     - mv .env.testing .env
