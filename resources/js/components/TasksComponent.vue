@@ -55,7 +55,7 @@
                 if (this.newTask.trim().length === 0) {
                     return;
                 }
-                axios.post('/api/task', {
+                axios.post('/api/tasks', {
                     text: this.newTask
                 }).then((response) => {
                     this.tasks.push(response.data);
@@ -64,7 +64,7 @@
             },
             completeTask(task) {
                 let status = ! task.is_completed;
-                axios.put(`/api/task/${task.id}`, {
+                axios.put(`/api/tasks/${task.id}`, {
                     is_completed: status
                 }).then((response) => {
                     task.is_completed = response.data.is_completed
@@ -74,7 +74,7 @@
                 return task.is_completed;
             },
             removeTask(index, task) {
-                axios.delete(`/api/task/${task.id}`)
+                axios.delete(`/api/tasks/${task.id}`)
                     .then((response) => {
                         this.tasks = [
                             this.tasks.slice(0, index),

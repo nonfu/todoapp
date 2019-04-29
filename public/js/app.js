@@ -1822,7 +1822,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      axios.post('/api/task', {
+      axios.post('/api/tasks', {
         text: this.newTask
       }).then(function (response) {
         _this.tasks.push(response.data);
@@ -1834,7 +1834,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     completeTask: function completeTask(task) {
       var status = !task.is_completed;
-      axios.put("/api/task/".concat(task.id), {
+      axios.put("/api/tasks/".concat(task.id), {
         is_completed: status
       }).then(function (response) {
         task.is_completed = response.data.is_completed;
@@ -1848,7 +1848,7 @@ __webpack_require__.r(__webpack_exports__);
     removeTask: function removeTask(index, task) {
       var _this2 = this;
 
-      axios["delete"]("/api/task/".concat(task.id)).then(function (response) {
+      axios["delete"]("/api/tasks/".concat(task.id)).then(function (response) {
         _this2.tasks = [_this2.tasks.slice(0, index), _this2.tasks.slice(index + 1)];
       })["catch"](function (e) {
         return console.error(e);
@@ -34547,8 +34547,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sunqiang/Docker/wwwroot/todoapp/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sunqiang/Docker/wwwroot/todoapp/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /var/www/todoapp/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/todoapp/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

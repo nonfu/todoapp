@@ -22,7 +22,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $tasks = auth()->user()->tasks->all();
         return view('home', ['tasks' => json_encode($tasks)]);

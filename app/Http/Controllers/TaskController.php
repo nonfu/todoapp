@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\TaskCollection;
 use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api')->except(['index', 'show']);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -19,17 +16,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $tasks = Task::where('user_id', auth('api')->user()->id)->with('user')->paginate(10);
+        return new TaskCollection($tasks);
     }
 
     /**
@@ -60,18 +48,9 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return new \App\Http\Resources\Task(Task::with(['user' => function($query) {
+            $query->select('id', 'name');
+        }])->find($id));
     }
 
     /**

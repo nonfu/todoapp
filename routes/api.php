@@ -13,8 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+\Laravel\Passport\Passport::ignoreCsrfToken(true);
+Route::middleware('auth:api')->group(function (){
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+    Route::resource('tasks', 'TaskController', ['except' => ['create', 'edit']]);
 });
-
-Route::resource('task', 'TaskController');
