@@ -48,4 +48,8 @@ $api->version('v2', function ($api) {
     });
 });
 
+$api->version('v3', function ($api) {
+    $api->resource('tasks', \App\Http\Controllers\Api\TaskController::class);
+});
+
 
