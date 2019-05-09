@@ -109,7 +109,7 @@ $api->version('v1', function ($api) {
     $api->get('/task/{id}', function ($id) {
         return \App\Task::findOrFail($id);
     })->name('task.detail');
-    $api->get('/task/{id}/{url}', function ($id) {
+    $api->get('/task/{id}/url', function ($id) {
         $url = app(\Dingo\Api\Routing\UrlGenerator::class)
             ->version('v1')
             ->route('task.detail', ['id' => $id]);
@@ -120,12 +120,6 @@ $api->version('v1', function ($api) {
 $api->version('v2', function ($api) {
     $api->get('/task/{id}', function ($id) {
         return \App\Task::findOrFail($id);
-    });
-    $api->get('/task/{id}/{url}', function ($id) {
-        $url = app(\Dingo\Api\Routing\UrlGenerator::class)
-            ->version('v2')
-            ->route('task.detail', ['id' => $id]);
-        return $url;
     });
 });
 
