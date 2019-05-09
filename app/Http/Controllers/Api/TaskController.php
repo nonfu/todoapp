@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\ApiController;
 use App\Task;
+use App\Transformers\TaskTransformer;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class TaskController extends ApiController
 {
@@ -15,7 +17,8 @@ class TaskController extends ApiController
      */
     public function index()
     {
-        //
+        $tasks = Task::paginate();
+        return $this->response->paginator($tasks, new TaskTransformer());
     }
 
     /**
@@ -48,7 +51,7 @@ class TaskController extends ApiController
     public function show($id)
     {
         $task = Task::findOrFail($id);
-        return $this->response->item($task->toArray());
+        return $this->response->item($task, new TaskTransformer());
     }
 
     /**

@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Task;
+use App\Transformers\TaskTransformer;
+use Dingo\Api\Transformer\Factory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // app(Factory::class)->register(Task::class, TaskTransformer::class);
     }
 }
