@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\ApiController;
+use App\Http\Requests\CreateTaskRequest;
 use App\Task;
 use App\Transformers\TaskTransformer;
 use Dingo\Api\Http\Response;
@@ -33,7 +34,7 @@ class TaskController extends ApiController
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -42,9 +43,10 @@ class TaskController extends ApiController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateTaskRequest $request)
     {
-        //
+        // 表单验证成功，继续后续处理
+        return $this->response->errorUnauthorized();
     }
 
     /**
@@ -55,7 +57,13 @@ class TaskController extends ApiController
      */
     public function show($id)
     {
-        $task = Task::findOrFail($id);
+        if (!is_numeric($id)) {
+            return $this->response->errorBadRequest();
+        }
+        $task = Task::find($id);
+        if (!$task) {
+            return $this->response->errorNotFound();
+        }
         Response::addFormatter('json', new Response\Format\Jsonp);
         return $this->response->item($task, new TaskTransformer());
     }
@@ -80,7 +88,7 @@ class TaskController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->response->errorForbidden();
     }
 
     /**
@@ -91,6 +99,6 @@ class TaskController extends ApiController
      */
     public function destroy($id)
     {
-        //
+        return $this->response->errorInternal();
     }
 }

@@ -4,9 +4,7 @@
     <list default="true" id="ed33ce57-2f7e-4a22-80fb-a2302d9b6130" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +40,7 @@
           <entry key="gitignore" value="5" />
           <entry key="js" value="27" />
           <entry key="md" value="13" />
-          <entry key="php" value="6997" />
+          <entry key="php" value="7466" />
           <entry key="testing" value="75" />
           <entry key="txt" value="23" />
           <entry key="vue" value="112" />
@@ -56,7 +54,7 @@
           <entry key="Git file" value="5" />
           <entry key="JavaScript" value="27" />
           <entry key="Markdown" value="13" />
-          <entry key="PHP" value="6853" />
+          <entry key="PHP" value="7322" />
           <entry key="PLAIN_TEXT" value="23" />
           <entry key="Vue.js" value="112" />
           <entry key="YAML" value="449" />
@@ -76,7 +74,7 @@
           <entry key="lock" value="2" />
           <entry key="log" value="3" />
           <entry key="md" value="2" />
-          <entry key="php" value="337" />
+          <entry key="php" value="352" />
           <entry key="scss" value="2" />
           <entry key="testing" value="4" />
           <entry key="vue" value="9" />
@@ -92,7 +90,7 @@
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="14" />
           <entry key="Markdown" value="2" />
-          <entry key="PHP" value="317" />
+          <entry key="PHP" value="332" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SCSS" value="2" />
           <entry key="Vue.js" value="9" />
@@ -111,98 +109,93 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="139" column="14" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/api.php">
+        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/FormRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="216" column="61" selection-start-line="216" selection-start-column="61" selection-end-line="216" selection-end-column="61" />
+            <state relative-caret-position="-3491">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateTaskRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-293" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/ValidatesWhenResolvedTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-964">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="34" column="11" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
+              <folding>
+                <element signature="e#33#46#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithInput.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="181" column="20" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="39" />
-              <folding>
-                <element signature="e#33#80#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="301">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
               <folding>
                 <element signature="e#44#83#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Listeners/AddPaginationLinksToResponse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
-              <folding>
-                <element signature="e#33#72#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Event/ResponseWasMorphed.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Event/ResponseIsMorphing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response/Format/Jsonp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -236,7 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/factories/TaskFactory.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_051126_create_tasks_table.php" />
         <option value="$PROJECT_DIR$/resources/js/components/TaskComponent.vue" />
         <option value="$PROJECT_DIR$/resources/css/app.css" />
@@ -279,13 +271,14 @@
         <option value="$PROJECT_DIR$/app/Transformers/UserTransformer.php" />
         <option value="$PROJECT_DIR$/vendor/dingo/api/src/Transformer/Factory.php" />
         <option value="$PROJECT_DIR$/vendor/dingo/api/src/Transformer/Adapter/Fractal.php" />
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/api.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Listeners/AddPaginationLinksToResponse.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/CreateTaskRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" />
       </list>
     </option>
@@ -450,13 +443,8 @@
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="todoapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
@@ -467,6 +455,12 @@
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="todoapp" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="composer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
@@ -497,6 +491,88 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Concerns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+              <item name="Validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="http-kernel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="http-kernel" type="462c0819:PsiDirectoryNode" />
+              <item name="Exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
@@ -566,12 +642,12 @@
       <workItem from="1556522155489" duration="7976000" />
       <workItem from="1557111885688" duration="9053000" />
       <workItem from="1557283700019" duration="14113000" />
-      <workItem from="1557454015771" duration="7800000" />
+      <workItem from="1557454015771" duration="11321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96587000" />
+    <option name="totallyTimeSpent" value="100108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,8 +662,8 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8291233" visible="true" weight="0.22317597" />
-      <window_info id="Structure" order="1" sideWeight="0.17087667" side_tool="true" visible="true" weight="0.22317597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8283333" visible="true" weight="0.2911302" />
+      <window_info id="Structure" order="1" sideWeight="0.17166667" side_tool="true" visible="true" weight="0.2911302" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -601,7 +677,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.25301206" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.18915662" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.27710843" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -649,69 +725,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Routing/Adapter/Laravel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4183" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Provider/ServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-763" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Provider/RoutingServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Provider/LaravelServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Provider/HttpServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="555" column="38" selection-start-line="555" selection-start-column="38" selection-end-line="555" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Serializer/Serializer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Serializer/DataArraySerializer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Serializer/JsonApiSerializer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#7#240#0#PHP" expanded="true" />
-            <element signature="e#280#309#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/league/fractal/src/Serializer/ArraySerializer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -787,23 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding>
-            <element signature="e#33#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithInput.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3618">
-          <caret line="205" column="20" selection-start-line="205" selection-start-column="20" selection-end-line="205" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -914,13 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response/Factory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -932,13 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-138">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -983,20 +965,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="226">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
-            <element signature="e#44#83#0#PHP" expanded="true" />
+            <element signature="e#34#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response.php">
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response/Factory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="358">
+          <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1931" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Exception/UnauthorizedHttpException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="34" column="11" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="e#33#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithInput.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="181" column="20" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/ValidatesWhenResolvedTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-964">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/FormRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3491">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="139" column="14" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateTaskRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding>
+            <element signature="e#44#83#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -121,6 +121,32 @@ $api->version('v1', function ($api) {
         $fractal = new \League\Fractal\Manager();
         return $fractal->parseIncludes('user')->createData($resource)->toJson();
     });
+    $api->put('task/{id}', function ($id) {
+        $task = \App\Task::find($id);
+
+        if ($task->updated_at > app('request')->get('last_updated')) {
+            throw new \Symfony\Component\HttpKernel\Exception\ConflictHttpException('Task was updated prior to your request.');
+        }
+
+        // No error, we can continue to update the user as per usual.
+    });
+    $api->post('tasks', function () {
+        throw new \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('Basic');
+        $rules = [
+            'text' => ['required', 'string'],
+            'is_completed' => ['required', 'boolean']
+        ];
+
+        $payload = app('request')->only('text', 'is_completed');
+
+        $validator = app('validator')->make($payload, $rules);
+
+        if ($validator->fails()) {
+            throw new \Dingo\Api\Exception\StoreResourceFailedException('Could not create new task.', $validator->errors());
+        }
+
+        // Create user as per usual.
+    });
 });
 
 $api->version('v2', function ($api) {
