@@ -15,7 +15,7 @@ class TaskTransformer extends TransformerAbstract
             'id' => $task->id,
             'text' => $task->text,
             'completed' => $task->is_completed ? 'yes' : 'no',
-            'link' => route('tasks.show', ['id' => $task->id])
+            'link' => app(\Dingo\Api\Routing\UrlGenerator::class)->version('v1')->route('task.detail', ['id' => $task->id])
         ];
     }
 

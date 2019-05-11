@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\ApiController;
 use App\Task;
 use App\Transformers\TaskTransformer;
+use Dingo\Api\Http\Response;
 use Illuminate\Http\Request;
+use League\Fractal\Pagination\Cursor;
+use League\Fractal\Serializer\ArraySerializer;
+use League\Fractal\Serializer\JsonApiSerializer;
 use Symfony\Component\HttpFoundation\Cookie;
 
 class TaskController extends ApiController
@@ -15,9 +19,10 @@ class TaskController extends ApiController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::paginate();
+        $limit = $request->input('limit') ? : 10;
+        $tasks = Task::paginate($limit);
         return $this->response->paginator($tasks, new TaskTransformer());
     }
 
@@ -51,6 +56,7 @@ class TaskController extends ApiController
     public function show($id)
     {
         $task = Task::findOrFail($id);
+        Response::addFormatter('json', new Response\Format\Jsonp);
         return $this->response->item($task, new TaskTransformer());
     }
 

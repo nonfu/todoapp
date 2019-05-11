@@ -115,6 +115,12 @@ $api->version('v1', function ($api) {
             ->route('task.detail', ['id' => $id]);
         return $url;
     });
+    $api->get('/fractal/transformer', function () {
+        $task = \App\Task::findOrFail(1);
+        $resource = new \League\Fractal\Resource\Item($task, new \App\Transformers\TaskTransformer());
+        $fractal = new \League\Fractal\Manager();
+        return $fractal->parseIncludes('user')->createData($resource)->toJson();
+    });
 });
 
 $api->version('v2', function ($api) {
