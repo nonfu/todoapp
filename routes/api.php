@@ -156,6 +156,18 @@ $api->version('v2', function ($api) {
 });
 
 $api->version('v3', function ($api) {
+    $api->post('user/auth', function () {
+        $credentials = app('request')->only('email', 'password');
+        try {
+            if (! $token = \Tymon\JWTAuth\Facades\JWTAuth::attempt($credentials)) {
+                throw new \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('Invalid credentials');
+            }
+        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
+            throw new \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('Create token failed');
+        }
+
+        return compact('token');
+    });
     $api->resource('tasks', \App\Http\Controllers\Api\TaskController::class);
 });
 

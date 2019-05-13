@@ -30,8 +30,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // app(Factory::class)->register(Task::class, TaskTransformer::class);
-        app(\Dingo\Api\Exception\Handler::class)->register(function (\Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
+        /*app(\Dingo\Api\Exception\Handler::class)->register(function (\Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
             return \Illuminate\Support\Facades\Response::make(['error' => 'Hey, what do you think you are doing!?'], 401);
-        });
+        });*/
     }
 }

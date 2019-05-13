@@ -6,6 +6,7 @@ use App\Http\Controllers\ApiController;
 use App\Http\Requests\CreateTaskRequest;
 use App\Task;
 use App\Transformers\TaskTransformer;
+use Dingo\Api\Auth\Auth;
 use Dingo\Api\Http\Response;
 use Illuminate\Http\Request;
 use League\Fractal\Pagination\Cursor;
@@ -15,6 +16,11 @@ use Symfony\Component\HttpFoundation\Cookie;
 
 class TaskController extends ApiController
 {
+    public function __construct()
+    {
+        $this->middleware('api.auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +29,10 @@ class TaskController extends ApiController
     public function index(Request $request)
     {
         $limit = $request->input('limit') ? : 10;
-        $tasks = Task::paginate($limit);
+        // 获取认证用户实例
+        //$user = app(Auth::class)->user();
+        $user = $this->auth->user();
+        $tasks = Task::where('user_id', $user->id)->paginate($limit);
         return $this->response->paginator($tasks, new TaskTransformer());
     }
 
