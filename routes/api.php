@@ -168,7 +168,26 @@ $api->version('v3', function ($api) {
 
         return compact('token');
     });
+    $api->post('user/token', function () {
+        app('request')->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        $http = new \GuzzleHttp\Client();
+        // 发送相关字段到后端应用获取授权令牌
+        $response = $http->post(route('passport.token'), [
+            'form_params' => [
+                'grant_type' => 'password',
+                'client_id' => env('CLIENT_ID'),
+                'client_secret' => env('CLIENT_SECRET'),
+                'username' => app('request')->input('email'),  // 这里传递的是邮箱
+                'password' => app('request')->input('password'), // 传递密码信息
+                'scope' => '*'
+            ],
+        ]);
+
+        return response()->json($response->getBody()->getContents());
+    });
     $api->resource('tasks', \App\Http\Controllers\Api\TaskController::class);
 });
-
-

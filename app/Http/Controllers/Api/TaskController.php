@@ -18,7 +18,7 @@ class TaskController extends ApiController
 {
     public function __construct()
     {
-        $this->middleware('api.auth');
+        $this->middleware('auth:api');
     }
 
     /**
@@ -30,8 +30,7 @@ class TaskController extends ApiController
     {
         $limit = $request->input('limit') ? : 10;
         // 获取认证用户实例
-        //$user = app(Auth::class)->user();
-        $user = $this->auth->user();
+        $user = $request->user();
         $tasks = Task::where('user_id', $user->id)->paginate($limit);
         return $this->response->paginator($tasks, new TaskTransformer());
     }
