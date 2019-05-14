@@ -33,5 +33,13 @@ class AppServiceProvider extends ServiceProvider
         /*app(\Dingo\Api\Exception\Handler::class)->register(function (\Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
             return \Illuminate\Support\Facades\Response::make(['error' => 'Hey, what do you think you are doing!?'], 401);
         });*/
+
+        /*app(\Dingo\Api\Http\RateLimit\Handler::class)->setRateLimiter(function ($app, $request) {
+            if ($app['api.auth']->check()) {
+                return $app['api.auth']->user()->getAuthIdentifier();
+            } else {
+                return $request->getClientIp();
+            }
+        });*/
     }
 }

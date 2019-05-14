@@ -168,7 +168,7 @@ $api->version('v3', function ($api) {
 
         return compact('token');
     });
-    $api->post('user/token', function () {
+    $api->post('user/token', ['middleware' => 'api.throttle', function () {
         app('request')->validate([
             'email' => 'required|string',
             'password' => 'required|string',
@@ -188,6 +188,6 @@ $api->version('v3', function ($api) {
         ]);
 
         return response()->json($response->getBody()->getContents());
-    });
+    }]);
     $api->resource('tasks', \App\Http\Controllers\Api\TaskController::class);
 });

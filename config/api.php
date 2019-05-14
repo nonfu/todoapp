@@ -183,7 +183,8 @@ return [
     */
 
     'throttling' => [
-
+        'default' => \Dingo\Api\Http\RateLimit\Throttle\Route::class,
+        'custom' => \App\Throttles\CustomThrottle::class,
     ],
 
     /*
