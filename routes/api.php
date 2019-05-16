@@ -156,38 +156,16 @@ $api->version('v2', function ($api) {
 });
 
 $api->version('v3', function ($api) {
-    $api->post('user/auth', function () {
-        $credentials = app('request')->only('email', 'password');
-        try {
-            if (! $token = \Tymon\JWTAuth\Facades\JWTAuth::attempt($credentials)) {
-                throw new \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('Invalid credentials');
-            }
-        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
-            throw new \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException('Create token failed');
-        }
-
-        return compact('token');
-    });
-    $api->post('user/token', ['middleware' => 'api.throttle', function () {
-        app('request')->validate([
-            'email' => 'required|string',
-            'password' => 'required|string',
-        ]);
-
-        $http = new \GuzzleHttp\Client();
-        // 发送相关字段到后端应用获取授权令牌
-        $response = $http->post(route('passport.token'), [
-            'form_params' => [
-                'grant_type' => 'password',
-                'client_id' => env('CLIENT_ID'),
-                'client_secret' => env('CLIENT_SECRET'),
-                'username' => app('request')->input('email'),  // 这里传递的是邮箱
-                'password' => app('request')->input('password'), // 传递密码信息
-                'scope' => '*'
-            ],
-        ]);
-
-        return response()->json($response->getBody()->getContents());
-    }]);
+    $api->post('user/auth', \App\Http\Controllers\Api\UserController::class . '@getTokenByJwt');
+    $api->post('user/token', \App\Http\Controllers\Api\UserController::class . '@getTokenByOauth', ['middleware' => 'api.throttle']);
     $api->resource('tasks', \App\Http\Controllers\Api\TaskController::class);
+    $dispatcher = app(\Dingo\Api\Dispatcher::class);
+    $api->get('task/{id}', function ($id) use ($dispatcher) {
+        try {
+            $task = $dispatcher->version('v3')->get('dingoapi/tasks/' . $id);
+        } catch (\Dingo\Api\Exception\InternalHttpException $exception) {
+            return $exception->getResponse();
+        }
+        return $task;
+    });
 });

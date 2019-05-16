@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
+$dispatcher = app(\Dingo\Api\Dispatcher::class);
+Route::get('/task/{id}', function ($id) use ($dispatcher) {
+    $task = $dispatcher->version('v3')->get('task/' . $id);
+    dd($task);
+});

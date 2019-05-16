@@ -68,6 +68,10 @@
                     is_completed: status
                 }).then((response) => {
                     task.is_completed = response.data.is_completed
+                    Echo.private(`task.${task.id}`)
+                        .listen('TaskStatusUpdated', (e) => {
+                            console.log(e.task);
+                        });
                 }).catch((e) => console.error(e));
             },
             checked(task) {

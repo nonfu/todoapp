@@ -34,6 +34,8 @@ class AuthServiceProvider extends ServiceProvider
         // API 认证路由注册
         Passport::routes();
 
+        Passport::personalAccessClientId(5);
+
         // Dingo 认证驱动注册
         /*$this->app->make(Auth::class)->extend('basic', function ($app) {
             return new Basic($app['auth'], 'email');

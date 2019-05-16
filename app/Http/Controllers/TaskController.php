@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TaskStatusUpdated;
 use App\Http\Resources\TaskCollection;
 use App\Task;
 use Illuminate\Http\Request;
@@ -61,7 +62,9 @@ class TaskController extends Controller
      */
     public function update(Task $task)
     {
-        return tap($task)->update(request()->only(['is_completed', 'text']))->fresh();
+        $task = tap($task)->update(request()->only(['is_completed', 'text']))->fresh();
+        event(new TaskStatusUpdated($task));
+        return $task;
     }
 
     /**
