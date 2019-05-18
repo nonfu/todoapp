@@ -9,9 +9,21 @@ use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
+/**
+ * APIs For User Auth
+ * @package App\Http\Controllers\Api
+ * @group 用户认证
+ */
 class UserController extends ApiController
 {
-    // 获取 Json Web Token
+    /**
+     * 获取 Json Web Token
+     * @param Request $request
+     * @return array
+     * @bodyParam email string required email
+     * @bodyParam password string required password
+     * @response {"token": "Access Token"}
+     */
     public function getTokenByJwt(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -26,7 +38,15 @@ class UserController extends ApiController
         return compact('token');
     }
 
-    // 通过 OAuth 密码授权获取令牌
+    /**
+     * 通过 OAuth 密码授权获取令牌
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     * @bodyParam email string required email
+     * @bodyParam password string required password
+     * @response {"token_type": "Bearer", "expires_in": 31622400, "access_token": "Access Token Value", "refresh_token": "Refresh Token Value"}
+     */
     public function getTokenByOauth(Request $request)
     {
         $this->validate($request, [

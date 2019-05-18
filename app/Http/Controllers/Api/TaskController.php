@@ -17,9 +17,9 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 
 /**
- * Task Resource Controller
+ * APIs For Task Resources
  * @package App\Http\Controllers\Api
- * @Resource("Tasks", uri="/tasks")
+ * @group 任务管理
  */
 class TaskController extends ApiController
 {
@@ -29,19 +29,14 @@ class TaskController extends ApiController
     }
 
     /**
-     * Display a listing of the resource.
+     * Task List
+     *
      * @param Request $request
      * @return \Illuminate\Http\Response
-     * @GET("/{?page,limit}")
-     * @Versions({"v3"})
-     * @Parameters({
-     *     @Parameter("page", description="page number", type="integer", required=false, default=1),
-     *     @Parameter("limit", description="task item number per page", type="integer", required=false, default=10)
-     * })
-     * @Request(headers={
-     *         "Authorization": "Bearer {API Access Token}"
-     * })
-     * @Response(200, body={"data":{{"id":1,"text":"Test Task 1","completed":"no","link":"http://todo.test/dingoapi/task/1"}},"meta":{"pagination":{"total":4,"count":1,"per_page":1,"current_page":1,"total_pages":4,"links":{"next":"http://todo.test/dingoapi/tasks?page=2"}}}})
+     * @authenticated
+     * @queryParam page required The number of the page. Example:1
+     * @queryParam limit required Task items per page.Example:10
+     * @responseFile responses/tasks.list.json
      */
     public function index(Request $request)
     {
@@ -53,24 +48,14 @@ class TaskController extends ApiController
     }
 
     /**
-     * Store a newly created resource in storage.
+     * New Task
      *
      * @param  CreateTaskRequest $request
      * @return \Illuminate\Http\Response
-     * @POST("/")
-     * @Versions({"v3"})
-     * @Request({"text":"test task", "is_completed":0}, headers={
-     *     "Authorization": "Bearer {API Access Token}"
-     * }, attributes={
-     *     @Attribute("text", type="string", required=true, description="the body of task", sample="test task"),
-     *     @Attribute("is_completed", type="boolean", required=true, description="task is completed or not", sample=0)
-     * })
-     * @Response(200, body={"data":{"id":1,"text":"Test Task 1","completed":"no","link":"http://todo.test/dingoapi/task/1"}}, attributes={
-     *     @Attribute("id", type="integer", description="the id of task", sample=1),
-     *     @Attribute("text", type="string", description="the body of task", sample="test task"),
-     *     @Attribute("completed", type="string", description="task is completed or not", sample="no"),
-     *     @Attribute("link", type="string", description="task link", sample="http://todo.test/dingoapi/task/1")
-     * })
+     * @authenticated
+     * @bodyParam text string required the body of task. Example: Test Task
+     * @bodyParam is_completed boolean required task is completed or not. Example: 0
+     * @responseFile responses/task.get.json
      */
     public function store(CreateTaskRequest $request)
     {
@@ -88,27 +73,14 @@ class TaskController extends ApiController
     }
 
     /**
-     * Display the specified resource.
+     * Task Detail
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     * @GET("/{id}")
-     * @Parameters({
-     *     @Parameter("id", type="integer", description="the ID of the task", required=true)
-     * })
-     * @Versions({"v3"})
-     * @Transaction({
-     *     @Request(headers={
-     *         "Authorization": "Bearer {API Access Token}"
-     *     }),
-     *     @Response(200, body={"data":{"id":1,"text":"Test Task 1","completed":"no","link":"http://todo.test/dingoapi/task/1"}}, attributes={
-     *         @Attribute("id", type="integer", description="the id of task", sample=1),
-     *         @Attribute("text", type="string", description="the body of task", sample="test task"),
-     *         @Attribute("completed", type="string", description="task is completed or not", sample="no"),
-     *         @Attribute("link", type="string", description="task link", sample="http://todo.test/dingoapi/task/1")
-     *     }),
-     *     @Response(404, body={"message":"404 not found", "status_code": 404})
-     * })
+     * @authenticated
+     * @queryParam id required The id of the task. Example: 1
+     * @responseFile responses/task.get.json
+     * @responseFile 404 responses/task.not_found.json
      */
     public function show($id)
     {
@@ -117,31 +89,17 @@ class TaskController extends ApiController
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update Task
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     * @PUT("/{id}")
-     * @Parameters({
-     *     @Parameter("id", type="integer", description="the ID of the task", required=true)
-     * })
-     * @Versions({"v3"})
-     * @Transaction({
-     *     @Request({"text":"test task", "is_completed":1}, headers={
-     *         "Authorization": "Bearer {API Access Token}"
-     *     }, attributes={
-     *         @Attribute("text", type="string", required=true, description="the body of task", sample="test task"),
-     *         @Attribute("is_completed", type="boolean", required=true, description="task is completed or not", sample=1)
-     *     }),
-     *     @Response(200, body={"data":{"id":1,"text":"Test Task 1","completed":"no","link":"http://todo.test/dingoapi/task/1"}}, attributes={
-     *         @Attribute("id", type="integer", description="the id of task", sample=1),
-     *         @Attribute("text", type="string", description="the body of task", sample="test task"),
-     *         @Attribute("completed", type="string", description="task is completed or not", sample="no"),
-     *         @Attribute("link", type="string", description="task link", sample="http://todo.test/dingoapi/task/1")
-     *     }),
-     *     @Response(404, body={"message":"404 not found", "status_code": 404})
-     * })
+     * @authenticated
+     * @queryParam id required The id of the task. Example:1
+     * @bodyParam text string required the body of task. Example: Test Task
+     * @bodyParam is_completed boolean required task is completed or not. Example: 1
+     * @responseFile responses/task.get.json
+     * @responseFile 404 responses/task.not_found.json
      */
     public function update(Request $request, $id)
     {
@@ -151,22 +109,14 @@ class TaskController extends ApiController
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete Task
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     * @DELETE("/{id}")
-     * @Parameters({
-     *     @Parameter("id", type="integer", description="the ID of the task", required=true)
-     * })
-     * @Versions({"v3"})
-     * @Transaction({
-     *     @Request(headers={
-     *         "Authorization": "Bearer {API Access Token}"
-     *     }),
-     *     @Response(200, body={"message": "Task deleted"}),
-     *     @Response(404, body={"message":"404 not found", "status_code": 404})
-     * })
+     * @authenticated
+     * @queryParam id required The id of the task. Example: 1
+     * @response {"message": "Task deleted"}
+     * @response 404 {"message":"404 not found", "status_code": 404}
      */
     public function destroy($id)
     {
