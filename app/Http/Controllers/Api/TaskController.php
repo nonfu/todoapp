@@ -17,9 +17,33 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 
 /**
- * APIs For Task Resources
- * @package App\Http\Controllers\Api
- * @group 任务管理
+ * @OA\Info(
+ *     version="3.0",
+ *     title="Task Resource OpenApi",
+ *     @OA\Contact(
+ *         name="学院君",
+ *         url="http://xueyuanjun.com",
+ *         email="support@todo.test"
+ *     )
+ * ),
+ * @OA\Server(
+ *     url="http://todo.test/dingoapi/tasks"
+ * ),
+ * @OA\SecurityScheme(
+ *     type="oauth2",
+ *     description="Use a global client_id / client_secret and your email / password combo to obtain a token",
+ *     name="passport",
+ *     in="header",
+ *     scheme="http",
+ *     securityScheme="passport",
+ *     @OA\Flow(
+ *         flow="password",
+ *         authorizationUrl="/oauth/authorize",
+ *         tokenUrl="/oauth/token",
+ *         refreshUrl="/oauth/token/refresh",
+ *         scopes={}
+ *     )
+ * )
  */
 class TaskController extends ApiController
 {
@@ -29,14 +53,47 @@ class TaskController extends ApiController
     }
 
     /**
-     * Task List
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
-     * @authenticated
-     * @queryParam page required The number of the page. Example:1
-     * @queryParam limit required Task items per page.Example:10
-     * @responseFile responses/tasks.list.json
+     * @OA\Get(
+     *     path="/",
+     *     operationId="getTaskList",
+     *     tags={"Tasks"},
+     *     summary="Get list of tasks",
+     *     description="Returns list of tasks",
+     *     @OA\Parameter(
+     *         name="Accept",
+     *         description="Accept header to specify api version",
+     *         required=false,
+     *         in="header",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="page",
+     *         description="The page num of the list",
+     *         required=false,
+     *         in="query",
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="limit",
+     *         description="The item num per page",
+     *         required=false,
+     *         in="query",
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="The result of tasks"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
      */
     public function index(Request $request)
     {
@@ -48,14 +105,46 @@ class TaskController extends ApiController
     }
 
     /**
-     * New Task
-     *
-     * @param  CreateTaskRequest $request
-     * @return \Illuminate\Http\Response
-     * @authenticated
-     * @bodyParam text string required the body of task. Example: Test Task
-     * @bodyParam is_completed boolean required task is completed or not. Example: 0
-     * @responseFile responses/task.get.json
+     * @OA\Post(
+     *     path="/",
+     *     operationId="newTaskItem",
+     *     tags={"Tasks"},
+     *     summary="Add New Task",
+     *     description="create new task",
+     *     @OA\Parameter(
+     *         name="Accept",
+     *         description="Accept header to specify api version",
+     *         required=false,
+     *         in="header",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\RequestBody(
+     *         request="text",
+     *         required=true,
+     *         description="The text of the task",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\RequestBody(
+     *         request="is_completed",
+     *         required=true,
+     *         description="If the task is completed or not",
+     *         @OA\Schema(
+     *             type="boolean"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="The task item created",
+     *         @OA\JsonContent(ref="#/components/schemas/task-transformer")
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
      */
     public function store(CreateTaskRequest $request)
     {
@@ -73,14 +162,43 @@ class TaskController extends ApiController
     }
 
     /**
-     * Task Detail
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     * @authenticated
-     * @queryParam id required The id of the task. Example: 1
-     * @responseFile responses/task.get.json
-     * @responseFile 404 responses/task.not_found.json
+     * @OA\Get(
+     *     path="/{id}",
+     *     operationId="getTaskItem",
+     *     tags={"Tasks"},
+     *     summary="Get Task",
+     *     description="Get specify task by id",
+     *     @OA\Parameter(
+     *         name="Accept",
+     *         description="Accept header to specify api version",
+     *         required=false,
+     *         in="header",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="id",
+     *         description="The id of the task",
+     *         required=true,
+     *         in="path",
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="The task item",
+     *         @OA\JsonContent(ref="#/components/schemas/task-transformer")
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="404 not found"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
      */
     public function show($id)
     {
@@ -89,17 +207,51 @@ class TaskController extends ApiController
     }
 
     /**
-     * Update Task
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     * @authenticated
-     * @queryParam id required The id of the task. Example:1
-     * @bodyParam text string required the body of task. Example: Test Task
-     * @bodyParam is_completed boolean required task is completed or not. Example: 1
-     * @responseFile responses/task.get.json
-     * @responseFile 404 responses/task.not_found.json
+     * @OA\Put(
+     *     path="/{id}",
+     *     operationId="updateTaskItem",
+     *     tags={"Tasks"},
+     *     summary="Update Task",
+     *     description="update existed task by id",
+     *     @OA\Parameter(
+     *         name="Accept",
+     *         description="Accept header to specify api version",
+     *         required=false,
+     *         in="header",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="id",
+     *         description="The id of the task",
+     *         required=true,
+     *         in="path",
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\RequestBody(
+     *         request="task_in_body",
+     *         required=true,
+     *         description="The task to update",
+     *         @OA\JsonContent(
+     *             ref="#/components/schemas/task-model"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="The task item updated",
+     *         @OA\JsonContent(ref="#/components/schemas/task-transformer")
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="404 not found"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
      */
     public function update(Request $request, $id)
     {
@@ -109,14 +261,42 @@ class TaskController extends ApiController
     }
 
     /**
-     * Delete Task
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     * @authenticated
-     * @queryParam id required The id of the task. Example: 1
-     * @response {"message": "Task deleted"}
-     * @response 404 {"message":"404 not found", "status_code": 404}
+     * @OA\Delete(
+     *     path="/{id}",
+     *     operationId="deleteTaskItem",
+     *     tags={"Tasks"},
+     *     summary="Delete Task",
+     *     description="delete existed task by id",
+     *     @OA\Parameter(
+     *         name="Accept",
+     *         description="Accept header to specify api version",
+     *         required=false,
+     *         in="header",
+     *         @OA\Schema(
+     *             type="string"
+     *         )
+     *     ),
+     *     @OA\Parameter(
+     *         name="id",
+     *         description="The id of the task",
+     *         required=true,
+     *         in="path",
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="The task is deleted successful"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="404 not found"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
      */
     public function destroy($id)
     {
