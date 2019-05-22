@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed33ce57-2f7e-4a22-80fb-a2302d9b6130" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Services/WebSocketService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -53,29 +52,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="env" value="208" />
+          <entry key="env" value="246" />
           <entry key="gitignore" value="5" />
           <entry key="js" value="28" />
           <entry key="json" value="16" />
           <entry key="md" value="86" />
-          <entry key="php" value="16802" />
+          <entry key="php" value="17249" />
           <entry key="sh" value="30" />
           <entry key="testing" value="75" />
-          <entry key="txt" value="37" />
+          <entry key="txt" value="49" />
           <entry key="vue" value="147" />
           <entry key="yml" value="449" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="283" />
+          <entry key=".env file" value="321" />
           <entry key="Blade" value="144" />
           <entry key="Git file" value="5" />
           <entry key="JSON" value="16" />
           <entry key="JavaScript" value="28" />
           <entry key="Markdown" value="86" />
-          <entry key="PHP" value="16658" />
-          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="PHP" value="17105" />
+          <entry key="PLAIN_TEXT" value="79" />
           <entry key="Vue.js" value="147" />
           <entry key="YAML" value="449" />
         </counts>
@@ -85,19 +84,21 @@
           <entry key="artisan" value="1" />
           <entry key="css" value="4" />
           <entry key="editorconfig" value="1" />
-          <entry key="env" value="19" />
+          <entry key="env" value="21" />
           <entry key="example" value="4" />
           <entry key="gitattributes" value="3" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
           <entry key="js" value="19" />
-          <entry key="json" value="23" />
+          <entry key="json" value="24" />
           <entry key="key" value="1" />
+          <entry key="laravels" value="1" />
           <entry key="lock" value="3" />
-          <entry key="log" value="6" />
+          <entry key="log" value="7" />
           <entry key="md" value="6" />
           <entry key="openapi" value="1" />
-          <entry key="php" value="653" />
+          <entry key="php" value="660" />
+          <entry key="pid" value="1" />
           <entry key="scss" value="2" />
           <entry key="sh" value="2" />
           <entry key="testing" value="4" />
@@ -110,16 +111,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="27" />
+          <entry key=".env file" value="29" />
           <entry key="Blade" value="21" />
           <entry key="CSS" value="4" />
           <entry key="Git file" value="3" />
           <entry key="HTML" value="3" />
-          <entry key="JSON" value="26" />
+          <entry key="JSON" value="27" />
           <entry key="JavaScript" value="19" />
           <entry key="Markdown" value="6" />
-          <entry key="PHP" value="634" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PHP" value="642" />
+          <entry key="PLAIN_TEXT" value="15" />
           <entry key="SCSS" value="2" />
           <entry key="TypeScript" value="4" />
           <entry key="Vue.js" value="12" />
@@ -129,7 +130,7 @@
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="2" />
+          <entry key="PHP Class.type" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -142,67 +143,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php">
+        <entry file="file://$PROJECT_DIR$/app/Services/WebSocketService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="702">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
-                <element signature="e#44#83#0#PHP" expanded="true" />
+                <element signature="e#120#173#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper/src/Websocket/Server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper/src/Http/Request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/laravels">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1903" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/laravels.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="54" column="55" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="56" column="18" selection-start-line="56" selection-end-line="56" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
+        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-05-22.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="161" column="52" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
+            <state relative-caret-position="429">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Task.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" lean-forward="true" selection-start-line="6" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Transformers/TaskTransformer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/Examples/using-refs/api-spec.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-              <folding>
-                <element signature="e#228#649#0#PHP" expanded="true" />
-                <element signature="e#1170#1449#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/Examples/openapi-spec/PullRequest.php">
+        <entry file="file://$PROJECT_DIR$/storage/laravels.pid">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/Examples/using-refs/Product.php">
+        <entry file="file://$PROJECT_DIR$/storage/laravels.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="3" />
+            <state>
+              <caret column="978" lean-forward="true" selection-start-column="978" selection-end-column="978" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/hhxsv5/laravel-s/src/Swoole/Server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1969">
+              <caret line="200" column="37" selection-start-line="200" selection-start-column="37" selection-end-line="200" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -230,6 +252,7 @@
       <find>throttling</find>
       <find>X-Socket-Id</find>
       <find>securityScheme</find>
+      <find>swoole_tables</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vendor/laravel</dir>
@@ -243,8 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php" />
-        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/passport/src/PassportServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/passport/src/Guards/TokenGuard.php" />
@@ -288,12 +309,14 @@
         <option value="$PROJECT_DIR$/development/swagger-constants.php" />
         <option value="$PROJECT_DIR$/development/swagger-v3.php" />
         <option value="$PROJECT_DIR$/development/swagger.sh" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/l5-swagger.php" />
         <option value="$PROJECT_DIR$/app/Transformers/TaskTransformer.php" />
         <option value="$PROJECT_DIR$/app/Task.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Services/WebSocketService.php" />
+        <option value="$PROJECT_DIR$/config/laravels.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -394,6 +417,7 @@
       <path value="$USER_HOME$/.composer/vendor/illuminate/container" />
       <path value="$USER_HOME$/.composer/vendor/composer" />
       <path value="$USER_HOME$/.composer/vendor/illuminate/contracts" />
+      <path value="$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -434,43 +458,13 @@
             <path>
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Transformers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todoapp" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="todoapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -553,12 +547,12 @@
       <workItem from="1557454015771" duration="26802000" />
       <workItem from="1557798731264" duration="8198000" />
       <workItem from="1557884320084" duration="37640000" />
-      <workItem from="1558323836506" duration="12627000" />
+      <workItem from="1558323836506" duration="19852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174054000" />
+    <option name="totallyTimeSpent" value="181279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,8 +567,8 @@
     <frame x="0" y="23" width="1440" height="785" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8258317" visible="true" weight="0.2067239" />
-      <window_info id="Structure" order="1" sideWeight="0.1741683" side_tool="true" visible="true" weight="0.2067239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.82714057" visible="true" weight="0.2067239" />
+      <window_info id="Structure" order="1" sideWeight="0.17285945" side_tool="true" visible="true" weight="0.2067239" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -587,8 +581,8 @@
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49928468" weight="0.6457831" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.35336193" side_tool="true" visible="true" weight="0.26262626" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.64663804" visible="true" weight="0.26262626" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.35407725" side_tool="true" visible="true" weight="0.10678211" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.6459227" visible="true" weight="0.10678211" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -637,58 +631,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/darkaonline/l5-swagger/src/Console/GenerateDocsCommand.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/darkaonline/l5-swagger/src/Exceptions/L5SwaggerException.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/darkaonline/l5-swagger/src/L5SwaggerServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/responses/task.not_found.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/src/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/src/Analyser.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/src/Analysis.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/src/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-356" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/bin/openapi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -813,13 +755,6 @@
     <entry file="file://$PROJECT_DIR$/storage/api-docs/api-docs.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/l5-swagger.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -877,7 +812,7 @@
     <entry file="file://$PROJECT_DIR$/vendor/zircote/swagger-php/Examples/using-refs/api-spec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
           <folding>
             <element signature="e#228#649#0#PHP" expanded="true" />
             <element signature="e#1170#1449#0#PHP" expanded="true" />
@@ -895,14 +830,14 @@
     <entry file="file://$PROJECT_DIR$/app/Transformers/TaskTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
+          <caret line="32" column="7" selection-start-line="28" selection-start-column="4" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Task.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="33" lean-forward="true" selection-start-line="6" selection-end-line="33" />
+          <caret line="33" selection-start-line="6" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -918,8 +853,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="2898">
           <caret line="161" column="52" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/passport/src/Http/Middleware/CreateFreshApiToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper/src/Websocket/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/WebSocketService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#120#173#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/hhxsv5/laravel-s/src/Swoole/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1969">
+          <caret line="200" column="37" selection-start-line="200" selection-start-column="37" selection-end-line="200" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper/src/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/laravels">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1903" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/laravels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/laravels.pid">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/laravels.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="978" lean-forward="true" selection-start-column="978" selection-end-column="978" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="56" column="18" selection-start-line="56" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-05-22.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

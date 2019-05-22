@@ -72,6 +72,7 @@
       <path value="$USER_HOME$/.composer/vendor/illuminate/container" />
       <path value="$USER_HOME$/.composer/vendor/composer" />
       <path value="$USER_HOME$/.composer/vendor/illuminate/contracts" />
+      <path value="$USER_HOME$/.composer/vendor/eaglewu/swoole-ide-helper" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
